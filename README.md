@@ -12,7 +12,6 @@ Changes from VirtualCOMPort:
 * The USB drivers are moved into the project source/include directories.
 * There was also a missing include in cdc_usb_core.c which was added.
 * USB descriptors are slightly changed so that the device does not apear as **modem device** which activates the **Modem Manager** on Linux.
-* LCD and RGB LED driver from Sipeed's [Longan_GD32VF_examples](https://github.com/sipeed/Longan_GD32VF_examples) is used to make a LCD demo (some bugs was fixed and Chinese comments translated to English)
 
 The LISP interpreter currently supports:
 * Addition, substraction, multiplication and division `(+,-,*,/) or ('ADD,'SUB,'MUL,'DIV)`
