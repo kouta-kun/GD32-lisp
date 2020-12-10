@@ -17,6 +17,13 @@ struct se_symbol
     uint8_t sym_size;
 };
 
+struct se_matrix
+{
+    struct se_node *list;
+    int columns;
+    int rows;
+};
+
 struct se_node
 {
     union
@@ -24,12 +31,14 @@ struct se_node
         int int_val;
         struct se_symbol sym_val;
         struct se_list list_val;
+        struct se_matrix matrix_val;
     };
     enum node_type
     {
         NUMBER,
         SYMBOL,
-        LIST
+        LIST,
+        MATRIX
     } tag;
 };
 extern struct se_node *add_to_list(struct se_node *list_node, struct se_node *element);

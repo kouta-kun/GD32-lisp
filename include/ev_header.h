@@ -7,17 +7,17 @@ extern void log_object(struct se_node *rootw, char *logBuffer);
 extern void delete_object(struct se_node *rootw);
 extern void init_map();
 
-struct map_entry
+struct table_entry
 {
     uint32_t key;
     se_function function;
-    struct map_entry *left;
-    struct map_entry *right;
+    struct table_entry *left;
+    struct table_entry *right;
 };
 
 struct function_table
 {
-    struct map_entry *entries;
+    struct table_entry *entries;
     int entry_count;
     int entry_size;
 };

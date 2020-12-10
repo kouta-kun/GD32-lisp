@@ -8,11 +8,11 @@
 #include "se_header.h"
 #include "tok_header.h"
 #include "ev_header.h"
-
 extern uint8_t packet_sent, packet_receive;
 extern uint32_t receive_length;
-extern char *EV_LOG;
 extern struct function_table funtable;
+
+char *EV_LOG  = NULL;
 
 int bytes_received = 0;
 int bytes_sent = 0;
